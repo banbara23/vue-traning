@@ -88,6 +88,15 @@ index.html
 </html>
 ```
 
+ファイル修正時に自動でビルドが効くようになる
+
 ```sh
 webpack --watch
 ```
+
+vue-router導入
+
+```sh
+npm install vue-router --save
+```
+
