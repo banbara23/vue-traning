@@ -33,3 +33,61 @@ module.exports = {
   }
 }
 ```
+
+make bellow files
+- ./src/main.js
+- ./src/app.vue
+- index.html
+
+./src/main.js
+
+```js
+var Vue = require('vue')
+var appOptions = require('./app.vue')
+var app = new Vue(appOptions).$mount('#app')
+```
+./src/app.vue
+
+```js
+<template>
+  <h1 class="red">{{msg}}</h1>
+</template>
+
+<script>
+    module.exports = {
+        data: function() {
+            return {
+                msg: 'Hello world!'
+            }
+        }
+    }
+</script>
+
+<style>
+    .red {
+        color: #f00;
+    }
+</style>
+```
+index.html
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue simple sample </title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="build/build.js"></script>
+</body>
+
+</html>
+```
+
+```sh
+webpack --watch
+```
