@@ -15,3 +15,21 @@ npm install vue --save
 npm install webpack -g
 
 ```
+
+make webpack.config.js
+
+```js
+// webpack.config.js
+module.exports = {
+  entry: './src/main.js',
+  output: {
+    path: "./build",
+    filename: 'build.js'
+  },
+  module: {
+    loaders: [
+      { test: /\.vue$/, loader: 'vue' },
+    ]
+  }
+}
+```
